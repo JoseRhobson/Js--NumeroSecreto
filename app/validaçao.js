@@ -3,11 +3,12 @@
 function verificaSeOChutePossuiValorrValido(chute) {
 
     const numero = + chute
+    const GameOver = chute.toUpperCase()
 
-console.log(numero)
+//console.log(GameOver)
 
-if(gameOver(chute)){
-    console.log('game over')
+if(GameOver == 'GAME OVER'){
+    //console.log('')
     document.body.innerHTML= ` <h2>Você encerrou o jogo!</h2>
     <h3>o número secreto era ${numeroSecreto}</h3> 
     <button id='jogar-novamente' class='btn-jogar'> Jogar novamente </button>  
@@ -54,7 +55,3 @@ document.body.addEventListener('click', e => {
         window.location.reload()
     }
 })
-
-function gameOver(chute){
-    return chute == 'game over'
-}
